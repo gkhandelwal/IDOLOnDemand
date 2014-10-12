@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>IdolOnDemand</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ocrthroughURLAsync</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>ocrthroughStorage</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>ocrthroughURLSync</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Catalog</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>sentimentanalysis</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>findSimilar</members>
+        <name>ApexPage</name>
+    </types>
+    <version>30.0</version>
+</Package>

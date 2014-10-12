@@ -1,0 +1,64 @@
+<apex:page Controller="IdolOnDemand" >
+<apex:form >
+<apex:pageBlock title="HP IDOL ON DEMAND API">
+
+<apex:pageBlockSection columns="1">
+ 
+    <apex:outputPanel id="buttons">
+     <apex:pageBlock >
+        <apex:commandButton onclick="dofindSimilar();" value="Find Similar"/>
+      </apex:pageBlock>
+    </apex:outputPanel>
+ <script type="text/javascript">
+ function dofindSimilar()
+ {
+          window.open('/apex/findsimilar');
+ }
+ </script>
+</apex:pageBlockSection>
+
+<apex:pageBlockSection columns="1">
+    <b> OCR is used to extract text from image. Here we have two buttons. 
+    First button will call OCR Idol On demand API through URL and I have made that call asynchronous. Second one will first call Store Object API, which will store our image file in
+    IDOL database and than with the reference returned, we will do OCR Analysis on it</b>
+    <apex:outputPanel id="buttons">
+     <apex:pageBlock >
+        <apex:commandButton onclick="doOCRthroughURLAsync();" value="OCR through URL and Asynchronous call"/>
+        <br> </br>
+        <apex:commandButton onclick="doOCRthroughURLSync();" value="OCR through URL and Synchronous call"/>
+        <br> </br>
+        <apex:commandButton onclick="doOCRthroughStorage();" value="OCR through reference using Store Object API"/>
+      </apex:pageBlock>
+    </apex:outputPanel>
+ <script type="text/javascript">
+ function doOCRthroughURLAsync()
+ {
+          window.open('/apex/ocrthroughURLAsync');
+ }
+  function doOCRthroughURLSync()
+ {
+          window.open('/apex/ocrthroughURLSync');
+ }
+  function doOCRthroughStorage()
+ {
+          window.open('/apex/ocrthroughStorage');
+ }
+ </script>
+</apex:pageBlockSection>
+<apex:pageBlockSection columns="1">
+ 
+    <apex:outputPanel id="buttons">
+     <apex:pageBlock >
+        <apex:commandButton onclick="doSentiment();" value="Sentiment Analysis"/>
+      </apex:pageBlock>
+    </apex:outputPanel>
+ <script type="text/javascript">
+ function doSentiment()
+ {
+          window.open('/apex/sentimentanalysis');
+ }
+ </script>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
